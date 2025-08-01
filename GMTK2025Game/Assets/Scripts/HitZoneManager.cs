@@ -36,5 +36,15 @@ public class HitZoneManager : MonoBehaviour
         }
 
         Debug.Log("Missed");
+
+        
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Nota"))
+        {
+            Destroy(collision.gameObject);
+        }
     }
 }
